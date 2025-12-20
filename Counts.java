@@ -8,7 +8,7 @@ public class Counts {
         String str = "12abcdesa  ";
         for(int i=0;i<str.length()-1;i++){
             char currChar = str.charAt(i);
-            if (currChar=='a' || 
+            if (currChar=='a'|| 
             currChar=='e' ||
         currChar=='i' ||
     currChar=='o' || currChar=='u') {
@@ -34,7 +34,21 @@ System.out.println("Consonants "+ consonantsCounts);
 System.out.println("Digits "+ digits);
 System.out.println("Spaces "+  spaces);
 
-    
+    //Remove spaces from a string
+    String newStr="";
+    for (int i = 0; i < str.length()-1; i++) {
+        char currChar = str.charAt(i);
+        //for this .strip()  build in function can also be used
+        if(currChar!=' '){
+            newStr += currChar;
+        }
+    }
+System.out.println("New Str is " + newStr);
+
+//Replace all vowels with *
+System.out.println("Str without vowels is "+ str.replaceAll("[aeiou]", "*"));
+
+
 
     }
 }
