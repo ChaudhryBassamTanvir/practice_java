@@ -22,9 +22,15 @@ if (!repeated) {
 //Capitalize the first letter of each word.
 String sentence="Java is the best programming";
 String[] words = sentence.split("\\s+");
+for(int i=0;i<words.length;i++){
+   words[i]= words[i].substring(0,1).toUpperCase()+words[i].substring(1);
+   System.out.print(words[i]+" ");
+}
+System.out.println();
+ for (String wordSentence : words) {
+            System.out.print(wordSentence + " ");
+        }
 
 
-
-
-    }
+}
 }
