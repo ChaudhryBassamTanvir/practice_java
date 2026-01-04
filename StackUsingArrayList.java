@@ -12,7 +12,7 @@ public class StackUsingArrayList {
             }
 
 public int  pop(){
-    if (isEmpty()) {
+    if (list.isEmpty()) {
 System.out.println("Stack is Empty");
 return -1;
         
@@ -24,7 +24,7 @@ return -1;
 }
 //peek
 public int peek(){
-    if (isEmpty()) {
+    if (list.isEmpty()) {
         System.out.println("Stack is empty");
         return -1;
         
@@ -39,7 +39,15 @@ public int peek(){
         }
 
     public static void main(String[] args) {
-        
+        Stack s = new Stack();
+        s.push(1);
+        s.push(2);
+        s.push(3);
+    s.printStack();
+    
+        System.out.println( s.pop());
+        System.out.println(s.peek());
+    s.printStack();
 
 
     }
