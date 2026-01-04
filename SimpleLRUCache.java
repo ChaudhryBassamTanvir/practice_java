@@ -1,8 +1,9 @@
 
 import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class SimpleLRUCache {
-public class LRUCache<k,V> extends LinkedHashMap<K, V>{
+public static class LRUCache<K,V> extends LinkedHashMap<K, V>{
     private final int capacity;
 
     public LRUCache(int capacity){
@@ -21,6 +22,14 @@ public class LRUCache<k,V> extends LinkedHashMap<K, V>{
 
 
     public static void main(String[] args) {
+        LRUCache<Integer,String> cache= new LRUCache<>(2);
+        cache.put(1, "A");
+cache.put(2, "B");
+        cache.get(1);      // Accessing 1 makes it most recent
+        cache.put(3, "C"); // Capacity reached; 2 is evicted (LRU)
         
+        System.out.println(cache); // Output: {1=A, 3=C}
+
+
     }
 }
