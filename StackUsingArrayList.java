@@ -47,8 +47,9 @@ public int peek(){
     
         System.out.println( s.pop());
         System.out.println(s.peek());
-    s.printStack();
-
+        s.printStack();
+        s.push(4);
+        System.out.println(s.peek());
 
     }
 }
